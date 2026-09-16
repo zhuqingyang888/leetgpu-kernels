@@ -70,6 +70,13 @@ int main()
         [&]() {solve_tiled(d_A, d_B, d_C, M, N, K);},5,5);
 
     // =========================
+    // Benchmark 1D_Register
+    // =========================
+
+    auto result_1D_Register = benchmark_kernel("matrix_multiplication_1D_Register",
+        [&]() {solve_1D_Register(d_A, d_B, d_C, M, N, K);},5,5);
+
+    // =========================
     // Device -> Host
     // =========================
 
